@@ -1,15 +1,7 @@
-[![Latest Stable Version](https://poser.pugx.org/ritero/twitch-sdk/v/stable)](https://packagist.org/packages/ritero/twitch-sdk) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/jofner/Twitch-SDK/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/jofner/Twitch-SDK/?branch=master) [![Build Status](https://scrutinizer-ci.com/g/jofner/Twitch-SDK/badges/build.png?b=master)](https://scrutinizer-ci.com/g/jofner/Twitch-SDK/build-status/master) [![Total Downloads](https://poser.pugx.org/ritero/twitch-sdk/downloads)](https://packagist.org/packages/ritero/twitch-sdk) [![Latest Unstable Version](https://poser.pugx.org/ritero/twitch-sdk/v/unstable)](https://packagist.org/packages/ritero/twitch-sdk#dev-develop) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/jofner/Twitch-SDK/badges/quality-score.png?b=develop)](https://scrutinizer-ci.com/g/jofner/Twitch-SDK/?branch=develop) [![Build Status](https://scrutinizer-ci.com/g/jofner/Twitch-SDK/badges/build.png?b=develop)](https://scrutinizer-ci.com/g/jofner/Twitch-SDK/build-status/develop) [![License](https://poser.pugx.org/ritero/twitch-sdk/license)](https://packagist.org/packages/ritero/twitch-sdk)
-
 # TwitchTV SDK for PHP
 
-> UNMAINTAINED!!! I have no project to build SDK for or test on, so i abandoned this project. I'm sorry for that and i hope someone kind will continue with developing. Maybe another SDK's are around, so try search GitHub for alternative.
-
-> This is unofficial [TwitchTV SDK for PHP](https://github.com/jofner/Twitch-SDK) formerly known as ritero/twitch-sdk
-
-## WARNING BEFORE UPDATING TO 2.* !!!
-
-Version 2.* changed namespace! I know it's not best practice and i'm really sorry, but i have my reasons for that. Thanks for understanding.
-Version 2.* has BC breaks and lot of changes. Be careful with updating! Before updating thoroughly examine the changes and adjust your application for modified functions.
+> This is unofficial [TwitchTV SDK for PHP](https://github.com/jofner/Twitch-SDK) formerly known as ritero/twitch-sdk.
+> This is a fork of https://github.com/jofner/Twitch-SDK. To at least do basic patches.
 
 ## Requirements
 
@@ -22,7 +14,7 @@ The best way to install TwitchTV SDK is use [Composer](http://getcomposer.org/).
 ### Download the bundle using Composer
 
 ```bash
-$ composer require 'jofner/twitch-sdk:2.0.*'
+$ composer require 'decrypted/twitch-sdk:2.0.*'
 ```
 
 The downloaded package includes the `src` directory. This directory contains
