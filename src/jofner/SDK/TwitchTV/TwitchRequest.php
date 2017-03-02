@@ -180,7 +180,7 @@ class TwitchRequest
 
         if ($postfields !== null) {
             curl_setopt($crl, CURLOPT_POSTFIELDS, ltrim($postfields, '?'));
-            $optHttpHeader[] = 'Content-Length: ' . strlen($postfields);
+            //$optHttpHeader[] = 'Content-Length: ' . strlen($postfields);
         }
 
         curl_setopt($crl, CURLOPT_HTTPHEADER, $optHttpHeader);
