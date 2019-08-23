@@ -34,7 +34,7 @@ class Auth
      */
     public function getLoginURL($queryString)
     {
-        return $this->request->request(self::URI_AUTH . $queryString);
+        return $this->request->authRequest(self::URI_AUTH . $queryString);
     }
 
     /**
@@ -45,6 +45,6 @@ class Auth
      */
     public function getAccessToken($queryString)
     {
-        return $this->request->request(self::URI_AUTH_TOKEN, 'POST', $queryString);
+        return $this->request->authRequest(self::URI_AUTH_TOKEN, 'POST', $queryString);
     }
 }

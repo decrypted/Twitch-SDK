@@ -44,6 +44,7 @@ class TwitchRequest
     private $clientId;
 
     const URL_TWITCH = 'https://api.twitch.tv/helix/';
+    const URL_TWITCH_AUTH = 'https://id.twitch.tv/';
     const URL_TWITCH_TEAM = 'http://api.twitch.tv/api/team/';
     const URI_AUTH = 'oauth2/authorize';
     const URI_AUTH_TOKEN = 'oauth2/token';
@@ -102,6 +103,19 @@ class TwitchRequest
     }
 
     /**
+     * TwitchAPI request
+     * @param string $uri
+     * @param string $method
+     * @param string $postfields
+     * @return \stdClass
+     * @throws \jofner\SDK\TwitchTV\TwitchSDKException
+     */
+    public function authRequest($uri, $method = 'GET', $postfields = null)
+    {
+        return $this->generalRequest(self::URL_TWITCH_AUTH . $uri, $method, $postfields);
+    }
+
+    /**
      * Twitch Team API request
      * @param string $uri
      * @param string $method
@@ -125,7 +139,7 @@ class TwitchRequest
      * @return \stdClass
      * @throws \jofner\SDK\TwitchTV\TwitchSDKException
      */
-    private function generalRequest($uri, $method = 'GET', $postfields = null)
+    public function generalRequest($uri, $method = 'GET', $postfields = null)
     {
         $this->httpInfo = array();
 
