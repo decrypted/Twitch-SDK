@@ -38,7 +38,7 @@ class TwitchRequest
     public $throwCurlErrors = true;
 
     /** @var int API version to use */
-    private $apiVersion = 3;
+    private $apiVersion = 5;
 
     /** @var string */
     private $clientId;
