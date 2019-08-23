@@ -43,7 +43,7 @@ class TwitchRequest
     /** @var string */
     private $clientId;
 
-    const URL_TWITCH = 'https://api.twitch.tv/kraken/';
+    const URL_TWITCH = 'https://api.twitch.tv/helix/';
     const URL_TWITCH_TEAM = 'http://api.twitch.tv/api/team/';
     const URI_AUTH = 'oauth2/authorize';
     const URI_AUTH_TOKEN = 'oauth2/token';

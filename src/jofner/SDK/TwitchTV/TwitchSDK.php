@@ -124,7 +124,11 @@ class TwitchSDK
     {
         $user = new Methods\User($this->request);
 
-        return $user->getUser($username);
+        $queryString = $this->helper->buildQueryString(array(
+            'login' => $username,
+        ));
+
+        return $user->getUser($queryString);
     }
 
     /**
