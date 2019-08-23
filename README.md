@@ -1,6 +1,6 @@
 # TwitchTV SDK for PHP
 
-This is unofficial [TwitchTV SDK for PHP](https://github.com/decrypted/Twitch-SDK), a fork of https://github.com/jofner/Twitch-SDK as it got UNMAINTAINED. This will aim to do at least basic patches, and it is running in production.
+This is unofficial [TwitchTV SDK for PHP](https://github.com/decrypted/Twitch-SDK), a fork of https://github.com/jofner/Twitch-SDK as it got UNMAINTAINED. This will aim to do at least basic patches, and it is running in production. #therebedragons #v5
 
 ## Requirements
 
