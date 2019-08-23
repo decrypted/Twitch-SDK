@@ -43,6 +43,9 @@ class TwitchRequest
     /** @var string */
     private $clientId;
 
+    /** @var string */
+    private $accessToken;
+
     const URL_TWITCH = 'https://api.twitch.tv/helix/';
     const URL_TWITCH_AUTH = 'https://id.twitch.tv/';
     const URL_TWITCH_TEAM = 'http://api.twitch.tv/api/team/';
@@ -78,6 +81,25 @@ class TwitchRequest
     public function getClientId()
     {
         return $this->clientId;
+    }
+
+    /**
+     * Get Access Token
+     * @return string
+     */
+    public function getAccessToken()
+    {
+        return $this->accessToken;
+    }
+    /**
+     * Set Access Token
+     * @param string $token
+     * @return string
+     */
+    public function setAccessToken($token)
+    {
+        $this->accessToken = $token;
+        return $this;
     }
 
     /**
@@ -172,6 +194,9 @@ class TwitchRequest
             'Accept: ' . sprintf(self::MIME_TYPE, $this->getApiVersion()),
             'Client-ID: ' . $this->getClientId(),
         );
+        if ($this->getAccessToken()) {
+            $optHttpHeader[] = 'Authorization: Bearer ' . $this->getAccessToken();
+        }
 
         $crl = curl_init();
         curl_setopt($crl, CURLOPT_USERAGENT, $this->userAgent);

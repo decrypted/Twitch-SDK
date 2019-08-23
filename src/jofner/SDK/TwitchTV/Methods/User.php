@@ -18,7 +18,7 @@ class User
     protected $request;
 
     const URI_USER = 'users/';
-    const URI_USER_AUTH = 'user';
+    const URI_USER_AUTH = 'users';
     const URI_STREAMS_FOLLOWED_AUTH = 'streams/followed';
     const URI_VIDEOS_FOLLOWED_AUTH = 'videos/followed';
 

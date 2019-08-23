@@ -701,10 +701,15 @@ class TwitchSDK
     public function authUserGet($token)
     {
         $this->checkConfig();
-        $queryString = $this->getAuthString($token);
+        $this->request->setAccessToken($token);
         $user = new Methods\User($this->request);
 
-        return $user->getUserAuth($queryString);
+        $queryString = $this->getAuthString($token);
+        $users = $user->getUserAuth($queryString);
+        if (count($users->data) === 1) {
+            return $users->data[0];
+        }
+        return $users;
     }
 
     /**
