@@ -674,14 +674,14 @@ class TwitchSDK
      * @return \stdClass
      * @throws TwitchSDKException
      */
-    public function authAccessTokenGet($code)
+    public function authAccessTokenGet($code = null)
     {
         $this->checkConfig();
 
         $queryString = $this->helper->buildQueryString(array(
             'client_id' => $this->getConfigParam('client_id'),
             'client_secret' => $this->getConfigParam('client_secret'),
-            'grant_type' => 'authorization_code',
+            'grant_type' => $code ? 'authorization_code' : 'client_credentials',
             'redirect_uri' => $this->getConfigParam('redirect_uri'),
             'code' => $code,
         ));
@@ -710,6 +710,11 @@ class TwitchSDK
             return $users->data[0];
         }
         return $users;
+    }
+
+    public function setAccessToken($token)
+    {
+        $this->request->setAccessToken($token);
     }
 
     /**
